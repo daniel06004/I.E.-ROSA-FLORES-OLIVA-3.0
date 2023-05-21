@@ -1,0 +1,800 @@
+/* r ////////////////////////////////////
+ Estilos generales
+///////////////////////////////////// r*/
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+body{
+
+  margin: 0;
+  margin-top: 0;
+  background: linear-gradient(90deg, rgb(214, 40, 40), rgb(0, 48, 73)) ;
+  color: white;
+  padding-top: 0;
+}
+
+/*/////////////////////////////*/
+/*responsabilidad de bienvenidas*/
+/*/////////////////////////////*/
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móviles */
+  body{
+    display: block;
+    max-width: 100%;
+  }
+
+  /*pagina index*/
+  div.title {
+    margin-top: 45%; /* Ajusta el margen superior según tus necesidades */
+    font-size: 1em;
+  }
+  div.noticia1completa, div.noticia2completa {
+    flex-basis: 100%;
+  }
+  /*footer*/
+  footer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .containerfoter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cuadro {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  /*¨responsibidad pag matricula*/
+
+  body h2.tituloma{
+    margin-top: 38%;
+    text-align: center;
+  }
+  section.txt-1, aside{
+    max-width: 80%;
+    
+  }
+  div aside.txt-2, div section.txt-1{
+    max-width: 80%;
+    width: 100%;
+  }
+
+  .todo{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .alumno, .apoderado  {
+    flex-basis: 80%;
+    min-width: 250px;
+    margin-top: 5%;
+  }
+  
+  /*responsibidad paf contactenos*/
+  body div.pagcontacto{
+    margin-top: 38%;
+    display:block;
+    max-width: 100%;
+    justify-content: center;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    flex-direction: column;
+  }
+  body div.formcontacto{
+    width: 80%;
+    height: 100%;
+    margin-left: 8%;
+    margin-top: 5%;
+    order: 1;
+  }
+  body div.mapa{
+
+    margin-left: 40px;
+    max-width: 90%;
+    width: 100%;
+    height: 550px;
+    order: 2;
+    margin-left: 3%;
+  }
+}
+
+
+
+/*/////////////////////////////////////*/
+/*Fin de responsabilidad de bienvenidas*/
+/*/////////////////////////////////////*/
+
+
+/*----- Page Loader -----*/
+#loader {
+    background: #000000;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#loader h3{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color:#ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  top: calc(50% + 5px);
+  left:2px;
+  text-align: center;
+  position: relative;
+  margin: 0px auto;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0px auto;
+  top: calc(50% - 20px);
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ff0303;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*Fin loader page*/
+/*Fin de estilos generales*/
+
+
+
+/* r /////////////////////////////////////
+   Estilos de la barra de navegacion
+///////////////////////////////////// r */
+
+a{
+  color: #57abb8;
+  text-decoration: none;
+
+}
+a:hover{
+  color: rgb(255, 153, 0);
+}
+
+header,section#principal, footer{
+  background-color: rgba(0, 47, 73, 0.09);
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+header .header.scrolled {
+  background-color: #000000;
+}
+
+header h1, nav{
+  font-size: 10px;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+header h1{
+  text-align: left;
+  
+}
+nav ul{
+  padding-left:15px ;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  padding: 0.3em;
+}
+nav a{
+  color: rgba(255, 255, 255, 0.643);
+  display: block;
+  font-size: 1.2em;
+  padding: 0.2em;
+  margin-left: 20px;
+}
+nav a:hover{
+  
+  border-radius:  0 0.5em 0 0.5em;
+}
+.logo{
+  height: 70px;
+  padding: 10px;
+}
+.espacio{
+  margin-left: 10%;
+  margin-right: 10%;
+ 
+}
+header:hover {
+  background-color: rgba(0, 47, 73);
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+/*este de abajo es el encargado de todo los colores al hacer hover en la barra de notificacion*/
+
+header:hover ul li a {
+  color: rgba(255, 255, 255, 0.678);
+  
+}
+/*al hacer hover en la barra de navegacion cambia la letra blanco*/
+
+header:hover .ri {
+  color: rgba(255, 255, 255, 0.9);
+ 
+}
+/* y el fondo del boton cambia  a negro*/
+
+
+
+nav .link-active a {
+  color: #f3e0e0 !important;
+  border-bottom: solid 2px  #ffffff ;
+}
+nav ul .link-active a:after {
+  
+  border-bottom: solid 2px  #ffffff ;
+}
+
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 0%;
+  background-color: transparent;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: solid 2px  #ffffff ;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  background-color: #ffffff;
+}
+nav ul li a:hover:before {
+  width: 0%;
+  background-color: #ffffff;
+}
+
+.nav-overlay {
+  background-color: white;
+  color: white;
+  border: 1px solid rgba(45, 38, 38, 0.2);
+}
+.nav-overlay .logo img {
+  width: 100%;
+}
+.nav-overlay ul {
+  margin-top: 6px;
+}
+.nav-overlay ul li a {
+  color: rgb(255, 255, 255);
+}
+
+#namecole{
+  font-size: 1.3em;
+}
+
+.proi{
+  margin-top: -5px;
+}
+header nav .ri{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 25px  25px 0px;
+  border: solid 2px rgb(0, 42, 255);
+  
+}
+header nav .ri:hover{
+  background-color: rgb(0, 29, 220);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 25px  25px 0px;
+  border: solid 2px rgb(255, 255, 255);
+  
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+
+.header.fixed {
+  background-color: #003049;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Fin de la barra de navegacion*/
+
+
+
+
+/* r ////////////////////////////////////////
+      //////// Apartado Bienvenida ///////
+//////////////////////////////////////// r */
+.contenedor{
+  margin-top: 10%;
+  max-width: 100%;
+}
+
+.title{
+  text-align: left;
+  font-size: 2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.textbienvenida{
+  text-align: justify;
+  font-size: 1.2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.center{
+  margin: 5%;
+}
+.flecha img{
+  margin-top: 2%;
+  max-width: 65px;
+  max-height: 65px;
+}
+/*Fin de Estilos Bienvenida*/
+
+
+
+
+/* r ////////////////////////////////////////
+      //////// Apartado Noticias ///////
+//////////////////////////////////////// r */
+
+.contenedornoticias{
+  max-width: 100%;
+}
+.center #tnoticia{
+  max-width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.textnoticia{
+  text-align: justify;
+  font-size: 0.8em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.noticia1completa {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  flex-basis: 45%;
+  padding: 2%;
+  height: 25em;
+}
+#tnoticia{
+  margin-top: 8%;
+  margin-bottom: 0px;
+  overflow: hidden;
+  text-align: center;
+}
+.imgnoticia1 {
+  max-width: 50%;
+}
+
+
+
+.noticia2completa {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2%;
+  border-radius: 0.5em;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 400px;
+  flex-basis: 45%;
+  margin-left: 2%;
+  height: 25em;
+}
+
+.imgnoticia2 {
+  max-width: 50%;
+  border: 2px solid black;
+}
+
+section#contenido{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 ;
+  max-width: 100%;
+  padding: 2%;
+
+}
+
+/*Fin de Estilos Noticias*/
+
+
+
+
+
+
+/* r /////////////////////////////////////
+  //////////Apartado matricula //////////
+///////////////////////////////////// r */
+
+.tituloma{
+  margin-top: 5em;
+  border-bottom: 2px solid white; 
+}
+
+div.puntos{
+  display: block;
+  max-width: 100%;
+}
+section.txt-1, aside{
+  background-color: transparent;
+  border-radius: 0.5em;
+  display: inline-block;
+  margin: 0 ;
+  max-width: 100%;
+  padding: 0.25em;
+  vertical-align: top;
+  width: 40%;
+  margin: 0px 40px;
+  
+}
+aside.txt-2{
+  width: 40%;
+
+}
+.tmatri{
+  color: #ffffff;
+  font-family: helvetica;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+div.datos{
+  margin-top: 5%;
+  color: #F4D03F  ;
+  font-size: 1em;
+  text-align: center;
+}
+
+div.todo{
+      display:flex;
+      max-width: 90%;
+      justify-content: center;
+}
+section.apoderado{
+  margin-left: 10%;
+  max-width: 40%;
+  flex: 1;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  background-color:rgba(255, 255, 255, 0.20) ;
+  border-radius: 20px;
+  padding: 10px 20px;
+  
+}
+section.alumno{
+  margin-left: 5%;
+  max-width: 40%;
+  flex: 1;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  background-color:rgba(255, 255, 255, 0.20) ;
+  border-radius: 20px;
+  padding: 10px 20px;
+
+}
+
+div.imput{
+  margin: 2%;
+  text-align: center;
+  justify-content: center;
+}
+.btnenviarform{
+  margin: 2%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  color: black;
+  font-size: 1em;
+}
+.btnenviarform:hover{
+  background-color: rgb(0, 0, 0);
+  border: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+h2.titulo {
+  border-bottom: 2px solid white;
+}
+
+
+/* Fin pagina matricula*/
+
+
+
+
+/* r /////////////////////////////////////////////////
+  //////////Estilos de la pagina contactenos ////////
+////////////////////////////////////////////////////// r */
+
+
+/*TEXTO PRINCIPAL*/
+div.pagcontacto{
+  margin-top: 8%;
+  display:flex;
+  max-width: 95%;
+  justify-content: center;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+div.mapa{
+  max-width: 70%;
+  width: 60%;
+  height: 550px;
+
+}
+.maps_google{
+  width: 100%;
+  height: 100%;
+}
+div.formcontacto{
+  width: 30%;
+  height: 100%;
+  margin-left: 5%;
+  margin-top: 5%;
+
+}
+h3.tformulario{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.cuadros{
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.118);
+  color: white;
+}
+
+.tformulario{
+  font-size: 1.4em;
+  text-align: left;
+  margin: 2%;
+}
+.posisioncuadro{
+ text-align: center;
+}
+#button{
+  background-color: rgb(255, 255, 255); 
+  color: rgb(0, 0, 0); 
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  font-size: 1.2em; 
+  padding: 10px 20px;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#button:hover{
+  margin-top: 1%;
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  font-size: 1.5em; 
+  padding: 10px 20px;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* fin pagina contactenos */
+
+
+/* r /////////////////////////////////////
+  //////////Footer y estilos //////////
+///////////////////////////////////// r */
+
+
+footer {
+  margin-top: 10px;
+  max-width: 100%;
+  height: 40%;
+  background-color: rgba(6, 10, 15, 0.50);
+  display: flex;
+  padding: 0px 0px ;
+  -webkit-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+  -o-clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+}
+.containerfoter{
+  max-width: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+}
+footer p {
+  margin: 0px;
+  padding: 0px;
+  
+}
+footer .white {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+footer ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+footer ul li {
+  padding: 0px;
+  margin: 0px;
+  color: rgba(255, 255, 255);
+}
+footer hr {
+  border-radius: 10px;
+  background-color: whi;
+}
+.container .row{
+  max-width: 100%;
+}
+.col-xl-2{
+  max-width: 100%;
+  margin-top: 50px;
+  float: left;
+ 
+}
+.imgfooter{
+  float: left;
+
+}
+.imgfooter img{
+  margin-top: 48px;
+  width: 125px;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.col-xl-4{
+  max-width: 100%;
+  margin-top: 50px;
+  float: left;
+  width: 30%;
+}
+.cuadro2{
+  margin-right: 60px;
+}
+.copy {
+  padding: 10px 0px;
+  background-color: rgba(6, 10, 15, 0.50);
+  
+}
+.containercopy {
+  text-align: center;
+}
+
+.copy p, .copy a {
+  margin: 0PX;
+  padding: 0PX;
+  color: rgb(255, 255, 255);
+
+}
+.copy a {
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+.copy a:hover {
+  opacity: 1;
+  color: yellow;
+}
+
+.social-networks {
+  margin-top: 5px;
+}
+.social-networks li {
+  display: inline-block;
+  position: relative;
+  margin: 0px 7px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  cursor: pointer;
+}
+.social-networks li i {
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  -webkit-transform: rotate(0deg) translate(-3px, 3px);
+  transform: rotate(0deg) translate(-3px, 3px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social-networks li:hover {
+  -webkit-transform: rotate(45deg);
+  transform: ratate(45deg);
+  background-color: rgb(255, 255, 255);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.social-networks li:hover i {
+  color: #000000;
+  -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+  transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.cuadro{
+  max-width: 33%;
+}
+/*Fin de Estilos de pie de pagina*/
